@@ -64,16 +64,18 @@ go
  );
  go
 
- create table payment(
- paymentid int identity(1,1) primary key,
- orderid int not null,
- paymentType nvarchar(50),
- paymentDate datetime,
- Amount decimal(10,2),
+CREATE TABLE payment(
+    paymentid INT IDENTITY(1,1) PRIMARY KEY,
+    orderid INT NOT NULL,
+    paymentType NVARCHAR(50),
+    paymentDate DATETIME,
+    Amount DECIMAL(10,2),
 
-constraint fk_order foreign key(orderid)references orders(orderid)
+    CONSTRAINT fk_order_payment FOREIGN KEY(orderid)
+        REFERENCES orders(orderid)
 );
-go
+GO
+
 
 
 
@@ -152,3 +154,4 @@ VALUES
 
 
 
+ 
