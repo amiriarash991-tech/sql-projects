@@ -11,7 +11,5 @@
 
 
 
-!\[ERD of the project](sql-learning-projects/onlinestoreERD.png)
-
-
+!\[ERD of the project](sql-learning-projects/ERD.png)
 
