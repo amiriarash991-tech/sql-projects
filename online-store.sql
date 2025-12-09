@@ -4,6 +4,14 @@ go
 use onlinestore
 go
 
+
+create table users(
+useid int not null identity(1,1) primary key,
+username nvarchar(50) not null unique,
+password nvarchar(100) not null,
+role nvarchar(30) not null
+);
+go
  
 create table customers(
 customerid int not null identity(1,1),
@@ -111,6 +119,15 @@ values
 ('Yoga Mat', 'Eco-friendly yoga mat', 30.00, 90, 5),
 ('Football', 'Standard size football', 25.00, 60, 5);
 
+--users
+insert into users(username,password,role)
+values
+('admin', 'admin123','admin'),
+('arash','arashpass','customer'),
+('sara','sarapass','customer'),
+('staff1','staffpass','staff')
+
+
 
 -- Orders
 INSERT INTO orders (customerid, orderdate, shipaddress, totalamount)
@@ -143,6 +160,31 @@ VALUES
 (3, 'Credit Card', '2025-12-03', 2520.00),
 (4, 'Online Payment', '2025-12-04', 35.00),
 (5, 'Credit Card', '2025-12-05', 55.00)
+
+----------------------
+use onlinestore
+go
+
+Alter Table orders 
+Add orderstatus nvarchar(20) default 'pending';
+
+
+Alter Table payment
+add paymentstatus nvarchar(20) default 'pending';
+
+
+create unique index IX_unique_email on customers(email)
+
+create unique index IX_unique_username on users(username)
+
+
+
+
+
+
+
+
+
 
  
 
