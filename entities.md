@@ -1,4 +1,4 @@
-#Entities for online shop database
+\#Entities for online shop database
 
 -Users
 -products
@@ -6,3 +6,12 @@
 -orders
 -orderItems
 -Payments
+
+
+
+
+
+!\[ERD of the project](sql-learning-projects/onlinestoreERD.png)
+
+
+
