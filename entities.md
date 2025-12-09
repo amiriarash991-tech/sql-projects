@@ -8,10 +8,7 @@
 -Payments
 
 
-
-
-
-!\[ERD of the project](sql-learning-projects/ERD.png)
+![ERD of the project](images/ERD.png))
 
 
 
