@@ -1,6 +1,7 @@
 \#Entities for online shop database
 
 -Users
+-roles
 -products
 -categories
 -orders
