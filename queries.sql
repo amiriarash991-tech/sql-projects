@@ -145,4 +145,15 @@ group by orderdetails.productid,orders.customerid
 having count(*) < 2
 );
  
- 
+----------------function table
+create function dbo.Getcustomerorders(@customerid int)
+returns table 
+as 
+return 
+(
+   select orderid,orderdate,totalamount
+   from orders
+   where  customerid = @customerid
+);
+
+select * from dbo.getcustomerorders(1)
